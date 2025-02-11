@@ -1,11 +1,11 @@
 -- init
-local player = game.Players.LocalPlayer
+local player = cloneref(game:GetService("Players")).LocalPlayer
 local mouse = player:GetMouse()
 
 -- services
-local input = game:GetService("UserInputService")
-local run = game:GetService("RunService")
-local tween = game:GetService("TweenService")
+local input = cloneref(game:GetService("UserInputService"))
+local run = cloneref(game:GetService("RunService"))
+local tween = cloneref(game:GetService("TweenService"))
 local tweeninfo = TweenInfo.new
 
 -- additional
