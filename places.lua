@@ -25,7 +25,6 @@ local themes = {
 do
 	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
-		if shared.SIGNALAPI then object:Hide() end
 		
 		for i, v in pairs(properties or {}) do
 			if i == "Parent" then
