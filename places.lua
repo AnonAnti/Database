@@ -1,11 +1,11 @@
 -- init
-local player = cloneref(game:GetService("Players")).LocalPlayer
+local player = game:GetService("Players").LocalPlayer
 local mouse = player:GetMouse()
 
 -- services
-local input = cloneref(game:GetService("UserInputService"))
-local run = cloneref(game:GetService("RunService"))
-local tween = cloneref(game:GetService("TweenService"))
+local input = game:GetService("UserInputService")
+local run = game:GetService("RunService")
+local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 
 -- additional
@@ -25,6 +25,7 @@ local themes = {
 do
 	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
+		object:Protect()
 		
 		for i, v in pairs(properties or {}) do
 			if i == "Parent" then
@@ -2176,4 +2177,4 @@ do
 	end
 end
 
-getgenv().wdlibrary = library
+getgenv().NeptuneUILibrary = library
